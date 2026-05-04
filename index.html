@@ -43,7 +43,7 @@ nav ul a:hover{color:#e8ff57}
 .btn-cv{border:1.5px solid #1e1e1e;color:#555;padding:.6rem 1.5rem;border-radius:999px;font-size:.85rem;font-weight:500;cursor:pointer;transition:all .2s;background:transparent;display:inline-block}
 .btn-cv:hover{border-color:#555;color:#aaa}
 .hero-right{position:relative;overflow:hidden}
-.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-right img{width:100%;height:100%;object-fit:cover;object-position:center 25%;display:block}
 .hero-right::before{content:'';position:absolute;inset:0;background:linear-gradient(to right,#0a0a0a 0%,rgba(10,10,10,.4) 30%,transparent 55%),linear-gradient(to top,#0a0a0a 0%,transparent 12%);z-index:1;pointer-events:none}
 
 /* ── SHARED ── */
@@ -227,12 +227,15 @@ body.editing [data-editable]:focus{outline:2px solid #e8ff57;background:rgba(232
 .process-name{font-size:.97rem;font-weight:800;color:#e0e0e0;margin-bottom:.45rem}
 .process-desc{font-size:.82rem;color:#555;line-height:1.72}
 
+/* ── EDIT TOOLBAR hidden for visitors ── */
+#edit-toolbar{display:none!important}
+
 /* ── RESPONSIVE ── */
 @media(max-width:900px){
   nav{display:none}
-  #hero{grid-template-columns:1fr}
-  .hero-right{height:55vw;max-height:380px}
-  .hero-left{padding:5rem 1.5rem 2.5rem}
+  #hero{display:flex;flex-direction:column}
+  .hero-right{order:-1;height:65vw;max-height:420px}
+  .hero-left{padding:2.5rem 1.5rem 3rem}
   .footer-inner{grid-template-columns:1fr 1fr}
   .case-meta{grid-template-columns:1fr}
   .m-grid-916{grid-template-columns:1fr}
